@@ -36,6 +36,7 @@ jobs:
           bash ./test.sh
           echo $TEST
           echo test, and deploy your project.
+          echo "${{github.event.pull_request.head.ref}}"
       - name: YEST
         env:
           MY_VAL: ${{ secrets.TEST }}
